@@ -56,12 +56,12 @@
             <div style="margin-left: 20px">
                 <h4>Share Post</h4>
                 <div class="share-icons">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ url($entry->slug) }}" class="share-icon" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('p/' . $entry->slug) }}" class="share-icon" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-facebook"></i>
                     </a>
-                    <a href="https://twitter.com/intent/tweet?url={{ $entry->get('url') }}" class="share-icon"><i class="bi bi-twitter"></i></a>
-                    <a href="https://api.whatsapp.com/send?text={{ url($entry->slug) }}" class="share-icon" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/shareArticle?url={{ url($entry->slug) }}" class="share-icon" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/intent/tweet?url={{ url('p/' . $entry->slug) }}" class="share-icon"><i class="bi bi-twitter"></i></a>
+                    <a href="https://api.whatsapp.com/send?text={{ url('p/' . $entry->slug) }}" class="share-icon" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?url={{ url('p/' . $entry->slug) }}" class="share-icon" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-linkedin"></i>
                     </a>
 

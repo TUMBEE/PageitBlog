@@ -1,0 +1,139 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+          -
+            handle: layout
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Layout
+              icon: template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: entries_field
+            field:
+              max_items: 1
+              mode: default
+              create: true
+              collections:
+                - blog_post
+              type: entries
+              display: 'Entries Field'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  blog_1:
+    display: 'Blog 1'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: featured_1
+            field:
+              max_items: 1
+              mode: default
+              create: true
+              type: entries
+              display: 'Featured 1'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  blog_2:
+    display: 'Blog 2'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: featured_2
+            field:
+              mode: default
+              create: true
+              type: entries
+              display: 'Featured 2'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              max_items: 1
+  blog_3:
+    display: 'Blog 3'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: featured_3
+            field:
+              mode: default
+              create: true
+              type: entries
+              display: 'Featured 3'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              max_items: 1
+          -
+            handle: romeo
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Text Field'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  new_tab:
+    display: 'New Tab'
+    sections:
+      -
+        display: 'New Section'
+title: Page

@@ -1,0 +1,11 @@
+name: Romeo
+super: true
+avatar: images/romeo.jpg
+id: 5db8732c-0b0c-4c45-af38-810675f82602
+password_hash: $2y$10$M6h7j48Efl5wqXmFdLFbm.ZzBba1m.zDvAySupHi6QSyAprbMCoa2
+preferences:
+  collections:
+    blog_post:
+      after_save: continue_editing
+    pages:
+      after_save: continue_editing

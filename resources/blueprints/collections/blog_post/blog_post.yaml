@@ -1,0 +1,196 @@
+title: 'Blog Post'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: blog_description
+            field:
+              antlers: false
+              type: textarea
+              display: 'Blog Description'
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              restrict: false
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - quote
+                - link
+                - image
+                - table
+              automatic_line_breaks: true
+              automatic_links: true
+              escape_markup: false
+              heading_anchors: true
+              smartypants: true
+              table_of_contents: false
+              antlers: false
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: blog_author
+            field:
+              type: users
+              display: Author
+              default:
+                - 5db8732c-0b0c-4c45-af38-810675f82602
+              localizable: true
+              max_items: 1
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              mode: select
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: blog_date
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: 'Post Date'
+              icon: date
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              format: 'd F Y'
+              validate:
+                - required
+          -
+            handle: blog_featured_image
+            field:
+              mode: list
+              container: assets
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Featured Image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              max_files: 1
+              min_files: 1
+              folder: images
+              instructions: 'The image must be 776 * 615'
+              validate:
+                - required
+          -
+            handle: blog_page_image
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Blog Page Image'
+              icon: assets
+              instructions: 'Blog image to be shown on the blog page.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              folder: images
+              validate:
+                - required
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - blog_post
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: category
+            field:
+              type: terms
+              taxonomies:
+                - category
+              display: Category
+              mode: select
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              max_items: 1
+              create: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: blog_home_featured
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              folder: images
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Blog Home Featured'
+              icon: assets
+              instructions: 'Image must be 578 * 301'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

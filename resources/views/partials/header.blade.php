@@ -53,7 +53,7 @@
     <div class="offcanvas-body">
         <ul class="nav flex-column">
             <li class="nav-item mobile-nav">
-              <a class="nav-link px-0 py-2 _txt_mobile_menu" href="">{{__('Home')}}</a>
+              <a class="nav-link px-0 py-2 _txt_mobile_menu" href="{{route('home')}}">{{__('Home')}}</a>
             </li>
             <li class="nav-item mobile-nav has-sub-menu">
                 <a class="nav-link px-0 py-2 _txt_mobile_menu" href="/account/posts/pending-approval" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">{{__('What we do')}} <i class="bi bi-chevron-down"></i></a>
